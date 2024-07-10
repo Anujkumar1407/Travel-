@@ -15,11 +15,9 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-image: linear-gradient(
-    to right,
-    var(--primary-color-dark),
-    var(--primary-color)
-  );
+  background-image: linear-gradient(to right,
+      var(--primary-color-dark),
+      var(--primary-color));
 }
 
 nav {
@@ -29,7 +27,7 @@ nav {
   min-height: 85px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 2rem 1rem;
+  padding: 0rem 1rem;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -47,12 +45,10 @@ nav {
 
 .link a {
   padding: 1rem;
-  padding-top: 2rem;
   color: var(--white);
   text-decoration: none;
   transition: 0.3s;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-radius: 5px;
 }
 
 .link a:hover {
@@ -82,12 +78,13 @@ nav {
 .left__content h4 {
   margin-bottom: 1rem;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 800;
   color: var(--secondary-color);
 }
 
 .left__content p {
   color: whitesmoke;
+  
 }
 
 .container__right {
@@ -131,25 +128,31 @@ nav {
   color: var(--white);
 }
 
-.btn {
+.primary__btn {
   margin-bottom: 3rem;
   min-width: 120px;
   padding: 0.75rem 1rem;
   font-size: 1rem;
+  font-weight: 600;
   outline: none;
-  border: 1px solid var(--secondary-color);
-  cursor: pointer;
-}
-
-.primary__btn {
   margin-right: 1rem;
   color: var(--primary-color);
   background-color: var(--secondary-color);
+  cursor: pointer;
+  border: none;
 }
 
 .secondary__btn {
+  margin-bottom: 3rem;
+  min-width: 120px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
   color: var(--secondary-color);
   background-color: transparent;
+  cursor: pointer;
+  border: none;
 }
 
 .socials {
@@ -170,7 +173,7 @@ nav {
   color: var(--secondary-color);
 }
 
-@media (max-width < 780px) {
+@media (max-width: 780px) {
   nav {
     justify-content: center;
   }
@@ -186,11 +189,17 @@ nav {
   .container__left {
     min-height: 700px;
   }
+  .right__content h1{
+    margin-bottom: 28px;
+  }
 
   .left__content {
     max-width: none;
     margin: 6rem 0;
     text-align: center;
+  }
+  .left__content h4{
+  color: #23253c;
   }
 
   .container__right {
@@ -209,6 +218,6 @@ nav {
   }
 
   .socials {
-    justify-content: center;
-  }
+    justify-content: center;
+  }
 }
